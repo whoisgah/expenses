@@ -10,42 +10,43 @@ class TransactionList extends StatelessWidget {
 
   const TransactionList(this.transactions, this.onRemove);
 
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 430,
-      child: transactions.isEmpty
-          ? Column(
-              children: [
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Nenhuma transação cadastrada!',
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  height: 200,
-                  child: Image.asset('assets/images/waiting.png',
-                      fit: BoxFit.cover),
-                ),
-              ],
-            )
-          : ListView.builder(
-              itemCount: transactions.length,
-              itemBuilder: (context, index) {
-                final tr = transactions[index];
-                return Card(
-                  elevation: 5,
-                  margin: EdgeInsets.symmetric(
-                    vertical: 8,
-                    horizontal: 5,
+    return transactions.isEmpty
+        ? LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              return Column(
+                children: [
+                  SizedBox(
+                    height: 20,
                   ),
-                  child: ListTile(
+                  Text(
+                    'Nenhuma transação cadastrada!',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: constraints.maxHeight * 0.6,
+                    child: Image.asset('assets/images/waiting.png',
+                        fit: BoxFit.cover),
+                  ),
+                ],
+              );
+            },
+          )
+        : ListView.builder(
+            itemCount: transactions.length,
+            itemBuilder: (context, index) {
+              final tr = transactions[index];
+              return Card(
+                elevation: 5,
+                margin: EdgeInsets.symmetric(
+                  vertical: 8,
+                  horizontal: 5,
+                ),
+                child: ListTile(
                     leading: CircleAvatar(
                       radius: 30,
                       child: Padding(
@@ -62,14 +63,27 @@ class TransactionList extends StatelessWidget {
                     subtitle: Text(
                       DateFormat('d MMM y').format(tr.date),
                     ),
-                    trailing: IconButton(
-                      onPressed: () => onRemove(tr.id),
-                      icon: Icon(Icons.delete),
-                      color: Theme.of(context).colorScheme.error,
-                    ),
-                  ),
-                );
-              }),
-    );
+                    trailing: MediaQuery.of(context).size.width > 400
+                        ? ElevatedButton.icon(
+                            onPressed: () => onRemove(tr.id),
+                            icon: Icon(
+                              Icons.delete,
+                              color: Theme.of(context).colorScheme.error,
+                            ),
+                            style: ButtonStyle(),
+                            label: Text(
+                              "Excluir",
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.error,
+                              ),
+                            ),
+                          )
+                        : IconButton(
+                            onPressed: () => onRemove(tr.id),
+                            icon: Icon(Icons.delete),
+                            color: Theme.of(context).colorScheme.error,
+                          )),
+              );
+            });
   }
 }
