@@ -1,0 +1,12 @@
+com.pluslife.tcc.expenses.app-jetified-annotation-experimental-1.1.0-0 C:\Users\bielb\.gradle\caches\transforms-3\02315cc9f75263553d2042718fc375ee\transformed\jetified-annotation-experimental-1.1.0\res
+com.pluslife.tcc.expenses.app-jetified-window-1.0.0-beta04-1 C:\Users\bielb\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\res
+com.pluslife.tcc.expenses.app-jetified-window-java-1.0.0-beta04-2 C:\Users\bielb\.gradle\caches\transforms-3\99750bb863b6fe460a7b5da8686e778d\transformed\jetified-window-java-1.0.0-beta04\res
+com.pluslife.tcc.expenses.app-core-1.6.0-3 C:\Users\bielb\.gradle\caches\transforms-3\d08c73bfb05384f2e52578171dbd141e\transformed\core-1.6.0\res
+com.pluslife.tcc.expenses.app-debug-4 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\android\app\src\debug\res
+com.pluslife.tcc.expenses.app-main-5 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\android\app\src\main\res
+com.pluslife.tcc.expenses.app-pngs-6 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\build\app\generated\res\pngs\debug
+com.pluslife.tcc.expenses.app-resValues-7 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\build\app\generated\res\resValues\debug
+com.pluslife.tcc.expenses.app-rs-8 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\build\app\generated\res\rs\debug
+com.pluslife.tcc.expenses.app-mergeDebugResources-9 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.pluslife.tcc.expenses.app-mergeDebugResources-10 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.pluslife.tcc.expenses.app-merged_res-11 C:\Users\bielb\OneDrive\Documentos\curso_flutter\expenses\expenses\build\app\intermediates\merged_res\debug
