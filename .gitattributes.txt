@@ -4,3 +4,4 @@
 *.makefile linguist-detectable=false
 *.mk linguist-detectable=false
 *.mkfile linguist-detectable=false
+Makefile linguist-vendored
